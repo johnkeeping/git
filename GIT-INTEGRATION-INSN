@@ -1,1 +1,13 @@
-base master
+base origin/pu
+
+merge reset-submodule-trailing-slash
+
+  Waiting for nd/magic-pathspecs to graduate to master.
+
+merge rebase-i-comment-squash
+
+  Comment out the first line of a "!squash" commit when generating a
+  commit message in git-rebase.
+
+  Merged to jk/pu on 2013-03-30.  Dogfooding for a while to see if
+  this is a sensible change.
