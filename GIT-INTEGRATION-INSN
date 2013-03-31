@@ -13,3 +13,5 @@ merge rebase-i-comment-squash
   this is a sensible change.
 
 merge completion-fixes
+
+merge doc-makefile-fix
