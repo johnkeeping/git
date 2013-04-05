@@ -17,3 +17,7 @@ merge rebase-i-comment-squash
 merge completion-fixes
 
 merge doc-makefile-fix
+
+merge unstuck-diff-algorithm
+
+merge merge-doc-diff-algorithm
