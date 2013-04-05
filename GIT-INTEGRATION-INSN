@@ -1,7 +1,5 @@
 base origin/pu
 
-merge diffcore-no-div-by-zero
-
 merge reset-submodule-trailing-slash
 
   Waiting for nd/magic-pathspecs to graduate to master.
