@@ -1,8 +1,27 @@
 base origin/pu
 
-merge reset-submodule-trailing-slash
+merge unstuck-diff-algorithm
 
-  Waiting for nd/magic-pathspecs to graduate to master.
+  Sent upstream.
+
+merge merge-doc-diff-algorithm
+
+  Sent upstream.
+
+merge submodule-diff-graph
+
+  Sent upstream.
+
+merge completion-fixes
+
+merge doc-makefile-fix
+
+merge merge-tree-same-added-in-sub
+
+  Currently in pu but should be re-rolled if someone responds to this
+  message:
+
+    http://article.gmane.org/gmane.comp.version-control.git/219378
 
 merge rebase-i-comment-squash
 
@@ -12,12 +31,6 @@ merge rebase-i-comment-squash
   Merged to jk/pu on 2013-03-30.  Dogfooding for a while to see if
   this is a sensible change.
 
-merge completion-fixes
+merge reset-submodule-trailing-slash
 
-merge doc-makefile-fix
-
-merge unstuck-diff-algorithm
-
-merge merge-doc-diff-algorithm
-
-merge submodule-diff-graph
+  Waiting for nd/magic-pathspecs to graduate to master.
