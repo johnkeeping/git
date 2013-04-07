@@ -12,6 +12,10 @@ merge submodule-diff-graph
 
   Sent upstream.
 
+merge doc-remote-helpers-refspec
+
+  Sent upstream.
+
 merge completion-fixes
 
 merge doc-makefile-fix
