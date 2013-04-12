@@ -16,16 +16,13 @@ merge doc-remote-helpers-refspec
 
   Sent upstream.
 
+merge merge-tree-same-added-in-sub
+
+  Sent upstream.
+
 merge completion-fixes
 
 merge doc-makefile-fix
-
-merge merge-tree-same-added-in-sub
-
-  Currently in pu but should be re-rolled if someone responds to this
-  message:
-
-    http://article.gmane.org/gmane.comp.version-control.git/219378
 
 merge rebase-i-comment-squash
 
