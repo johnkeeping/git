@@ -35,3 +35,7 @@ merge rebase-i-comment-squash
 merge reset-submodule-trailing-slash
 
   Waiting for nd/magic-pathspecs to graduate to master.
+
+merge remote-helper-strip-signed-tags
+
+  Needs tests in the tip commit.
