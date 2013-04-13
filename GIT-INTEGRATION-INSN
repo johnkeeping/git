@@ -38,4 +38,5 @@ merge reset-submodule-trailing-slash
 
 merge remote-helper-strip-signed-tags
 
-  Needs tests in the tip commit.
+  Ready for submission, but a minor textual conflict with something in pu
+  in t/t5801-remote-helpers.sh.
