@@ -19,9 +19,3 @@ merge rebase-i-comment-squash
 
   Merged to jk/pu on 2013-03-30.  Dogfooding for a while to see if
   this is a sensible change.
-
-merge origin/nd/magic-pathspecs
-
-merge reset-submodule-trailing-slash
-
-  Waiting for nd/magic-pathspecs to graduate to master.
