@@ -1,13 +1,5 @@
 base origin/pu
 
-merge merge-tree-same-added-in-sub
-
-  In next.
-
-merge remote-helper-strip-signed-tags
-
-  In pu.
-
 merge completion-fixes
 
 merge doc-makefile-fix
