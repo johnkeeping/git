@@ -1,24 +1,12 @@
 base origin/pu
 
-merge unstuck-diff-algorithm
-
-  Sent upstream.
-
-merge merge-doc-diff-algorithm
-
-  Sent upstream.
-
-merge submodule-diff-graph
-
-  Sent upstream.
-
-merge doc-remote-helpers-refspec
-
-  Sent upstream.
-
 merge merge-tree-same-added-in-sub
 
-  Sent upstream.
+  In next.
+
+merge remote-helper-strip-signed-tags
+
+  In pu.
 
 merge completion-fixes
 
@@ -35,8 +23,3 @@ merge rebase-i-comment-squash
 merge reset-submodule-trailing-slash
 
   Waiting for nd/magic-pathspecs to graduate to master.
-
-merge remote-helper-strip-signed-tags
-
-  Ready for submission, but a minor textual conflict with something in pu
-  in t/t5801-remote-helpers.sh.
