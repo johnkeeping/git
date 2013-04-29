@@ -15,5 +15,3 @@ merge rebase-i-comment-squash
 merge python-2to3-in-makefile
 
 merge submodule-subdirectory-ok
-
-merge merge-tree-typo-fix
