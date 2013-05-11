@@ -13,3 +13,5 @@ merge rebase-i-comment-squash
   this is a sensible change.
 
 merge python-2to3-in-makefile
+
+merge git-gui-fix-subdir
