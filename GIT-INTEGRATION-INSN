@@ -14,8 +14,6 @@ merge rebase-i-comment-squash
 
 merge python-2to3-in-makefile
 
-! merge git-gui-fix-subdir -s subtree
-
 merge merge-base-merge-child
 
 merge patch-id-notes-cache
