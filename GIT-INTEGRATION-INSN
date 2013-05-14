@@ -17,3 +17,7 @@ merge python-2to3-in-makefile
 merge merge-base-merge-child
 
 merge patch-id-notes-cache
+
+merge revision-cherry-respect-ancestry-path
+
+merge patch-id-notes-cache
