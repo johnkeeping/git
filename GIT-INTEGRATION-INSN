@@ -14,10 +14,15 @@ merge rebase-i-comment-squash
 
 merge python-2to3-in-makefile
 
-merge merge-base-merge-child
-
-merge patch-id-notes-cache
-
 merge revision-cherry-respect-ancestry-path
 
+  Make revision.c's cherry options respect commit limiting.
+
+merge merge-base-merge-child
+
+  Experimental new option to merge-base.  Unnecessary with the changes in
+  revision-cherry-respect-ancestry-path.
+
 merge patch-id-notes-cache
+
+  Experiment to cache patch IDs in a notes tree.
