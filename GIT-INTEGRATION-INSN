@@ -32,3 +32,5 @@ merge patch-id-notes-cache
   Experiment to cache patch IDs in a notes tree.
 
 merge patch-id-limit-paths
+
+merge format-patch-msgstore
