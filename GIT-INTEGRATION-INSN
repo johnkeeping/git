@@ -30,3 +30,5 @@ merge merge-base-merge-child
 merge patch-id-notes-cache
 
   Experiment to cache patch IDs in a notes tree.
+
+merge patch-id-limit-paths
