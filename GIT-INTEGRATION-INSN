@@ -1,5 +1,9 @@
 base origin/pu
 
+merge git-gui-fix-subdir -s subtree
+
+  Submitted upstream but mail to the maintainer bounced.
+
 merge completion-fixes
 
 merge doc-makefile-fix
