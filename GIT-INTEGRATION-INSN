@@ -34,5 +34,3 @@ merge patch-id-notes-cache
 merge patch-id-limit-paths
 
 merge format-patch-msgstore
-
-merge fetch-missing-ok
