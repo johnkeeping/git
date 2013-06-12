@@ -1,6 +1,6 @@
 base origin/jch
 
-merge git-gui-fix-subdir -s subtree
+merge git-gui/master -s subtree
 
   Submitted upstream but mail to the maintainer bounced.
 
@@ -21,11 +21,6 @@ merge python-2to3-in-makefile
 merge revision-cherry-respect-ancestry-path
 
   Make revision.c's cherry options respect commit limiting.
-
-merge merge-base-merge-child
-
-  Experimental new option to merge-base.  Unnecessary with the changes in
-  revision-cherry-respect-ancestry-path.
 
 merge patch-id-notes-cache
 
