@@ -1,8 +1,11 @@
 base origin/jch
 
+merge origin/jk/add-i-custom-diff-algo
+
 merge git-gui/master -s subtree
 
-  Submitted upstream but mail to the maintainer bounced.
+  Pull in pending git-gui changes (including mine for blame in a subdir)
+  which haven't made it into git.git yet.
 
 merge completion-fixes
 
@@ -29,5 +32,3 @@ merge patch-id-notes-cache
 merge patch-id-limit-paths
 
 merge format-patch-msgstore
-
-merge add-interactive-diff-algo
