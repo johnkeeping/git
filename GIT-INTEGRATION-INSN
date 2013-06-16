@@ -2,10 +2,16 @@ base origin/jch
 
 merge origin/jk/add-i-custom-diff-algo
 
+  Cooking upstream.
+
 merge git-gui/master -s subtree
 
   Pull in pending git-gui changes (including mine for blame in a subdir)
   which haven't made it into git.git yet.
+
+merge submodule-subdirectory-ok
+
+  Submitted upstream as v4.
 
 merge completion-fixes
 
