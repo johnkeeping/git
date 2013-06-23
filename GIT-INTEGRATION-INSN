@@ -16,6 +16,12 @@ merge origin/jk/submodule-subdirectory-ok
 
 merge completion-fixes
 
+  Submitted upstream.
+
+merge fast-import-ls-root
+
+  Submitted upstream.
+
 merge rebase-i-comment-squash
 
   Comment out the first line of a "!squash" commit when generating a
