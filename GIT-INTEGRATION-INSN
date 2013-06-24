@@ -18,7 +18,7 @@ merge completion-fixes
 
   Submitted upstream.
 
-merge fast-import-ls-root
+merge origin/jk/fast-import-empty-ls
 
   Submitted upstream.
 
