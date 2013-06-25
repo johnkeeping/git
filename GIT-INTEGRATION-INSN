@@ -4,12 +4,6 @@ merge origin/jk/add-i-custom-diff-algo
 
   Cooking upstream.
 
-merge origin/jk/doc-build-move-infordir-def
-
-merge origin/jk/mergetool-lib-refactor
-
-  Refactor to reduce code complexity.
-
 merge origin/jk/submodule-subdirectory-ok
 
   Submitted upstream as v4.
