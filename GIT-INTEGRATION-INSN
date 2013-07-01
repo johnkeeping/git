@@ -4,17 +4,13 @@ merge origin/jk/add-i-custom-diff-algo
 
   Cooking upstream.
 
-merge origin/jk/submodule-subdirectory-ok
-
-  Submitted upstream as v4.
-
 merge completion-fixes
 
-  Submitted upstream.
+  Cooking upstream.
 
 merge origin/jk/fast-import-empty-ls
 
-  Submitted upstream.
+  Cooking upstream.
 
 merge rebase-i-comment-squash
 
