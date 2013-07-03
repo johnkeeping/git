@@ -8,6 +8,10 @@ merge origin/jk/fast-import-empty-ls
 
   Cooking upstream.
 
+merge config-doc-fix
+
+  Submitted upstream
+
 merge rebase-i-comment-squash
 
   Comment out the first line of a "!squash" commit when generating a
@@ -29,5 +33,3 @@ merge patch-id-notes-cache
 merge patch-id-limit-paths
 
 merge format-patch-msgstore
-
-merge config-doc-fix
