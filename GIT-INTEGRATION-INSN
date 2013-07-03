@@ -12,6 +12,10 @@ merge config-doc-fix
 
   Submitted upstream
 
+merge t4205-locales
+
+  Submitted upstream
+
 merge rebase-i-comment-squash
 
   Comment out the first line of a "!squash" commit when generating a
