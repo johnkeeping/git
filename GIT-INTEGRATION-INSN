@@ -24,16 +24,4 @@ merge rebase-i-comment-squash
   Merged to jk/pu on 2013-03-30.  Dogfooding for a while to see if
   this is a sensible change.
 
-merge python-2to3-in-makefile
-
-merge revision-cherry-respect-ancestry-path
-
-  Make revision.c's cherry options respect commit limiting.
-
-merge patch-id-notes-cache
-
-  Experiment to cache patch IDs in a notes tree.
-
-merge patch-id-limit-paths
-
 merge format-patch-msgstore
