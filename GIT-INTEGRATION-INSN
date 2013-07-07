@@ -12,9 +12,16 @@ merge config-doc-fix
 
   Submitted upstream
 
-merge t4205-locales
+merge pull-dont-suggest-merge
 
   Submitted upstream
+
+merge t4205-locales
+
+  Rejected as it will be fixed in a different way in the original
+  author's incremental updates to this series.  This should be
+  detectable as a conflict during rebuild so I'm keeping it around to
+  avoid test failures.
 
 merge rebase-i-comment-squash
 
@@ -25,5 +32,3 @@ merge rebase-i-comment-squash
   this is a sensible change.
 
 merge format-patch-msgstore
-
-merge pull-dont-suggest-merge
