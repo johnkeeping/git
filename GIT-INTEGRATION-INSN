@@ -10,7 +10,7 @@ merge origin/jk/fast-import-empty-ls
 
 merge config-doc-fix
 
-  Submitted upstream
+  Submitted upstream as unofficial patch.
 
 merge pull-dont-suggest-merge
 
