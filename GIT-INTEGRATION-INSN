@@ -10,11 +10,11 @@ merge origin/jk/fast-import-empty-ls
 
 merge origin/jk/maint-config-multi-order
 
-  Submitted upstream as unofficial patch.
+  Cooking upstream.
 
-merge pull-dont-suggest-merge
+merge origin/jk/pull-to-integrate
 
-  Submitted upstream
+  Cooking upstream.
 
 merge t4205-locales
 
