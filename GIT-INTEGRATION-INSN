@@ -8,7 +8,7 @@ merge origin/jk/fast-import-empty-ls
 
   Cooking upstream.
 
-merge config-doc-fix
+merge origin/jk/maint-config-doc-order
 
   Submitted upstream as unofficial patch.
 
