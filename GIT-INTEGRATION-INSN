@@ -16,13 +16,6 @@ merge origin/jk/pull-to-integrate
 
   Cooking upstream.
 
-merge t4205-locales
-
-  Rejected as it will be fixed in a different way in the original
-  author's incremental updates to this series.  This should be
-  detectable as a conflict during rebuild so I'm keeping it around to
-  avoid test failures.
-
 merge rebase-i-comment-squash
 
   Comment out the first line of a "!squash" commit when generating a
