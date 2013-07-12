@@ -1,9 +1,5 @@
 base origin/jch
 
-merge origin/jk/bash-completion
-
-  Cooking upstream.
-
 merge origin/jk/fast-import-empty-ls
 
   Cooking upstream.
