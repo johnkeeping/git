@@ -4,6 +4,8 @@ merge origin/jk/fast-import-empty-ls
 
   Cooking upstream.
 
+merge origin/jc/pull-training-wheel
+
 merge rebase-i-comment-squash
 
   Comment out the first line of a "!squash" commit when generating a
@@ -13,5 +15,3 @@ merge rebase-i-comment-squash
   this is a sensible change.
 
 merge format-patch-msgstore
-
-merge pull-training-wheel
