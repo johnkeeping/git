@@ -6,9 +6,6 @@ merge origin/jk/fast-import-empty-ls
 
 merge origin/jc/pull-training-wheel
 
-  Waiting for Junio to fix the --is-ancestor check; then re-test a pull
-  with no upstream changes into a branch that has moved forward.
-
 merge doc-rev-parse
 
   Submitted upstream.
