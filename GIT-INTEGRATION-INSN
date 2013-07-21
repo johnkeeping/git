@@ -6,7 +6,7 @@ merge origin/jk/fast-import-empty-ls
 
 merge origin/jc/pull-training-wheel
 
-merge doc-rev-parse
+merge rev-parse-args
 
   Submitted upstream.
 
@@ -19,3 +19,6 @@ merge rebase-i-comment-squash
   this is a sensible change.
 
 merge format-patch-msgstore
+
+  Needs some changes to send-email as that does not pass --in-reply-to
+  through to format-patch.
