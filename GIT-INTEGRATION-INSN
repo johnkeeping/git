@@ -20,5 +20,5 @@ merge rebase-i-comment-squash
 
 merge format-patch-msgstore
 
-  Needs some changes to send-email as that does not pass --in-reply-to
+  Needs some changes to send-email as it does not pass --in-reply-to
   through to format-patch.
