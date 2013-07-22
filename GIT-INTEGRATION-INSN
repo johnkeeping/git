@@ -17,8 +17,3 @@ merge rebase-i-comment-squash
 
   Merged to jk/pu on 2013-03-30.  Dogfooding for a while to see if
   this is a sensible change.
-
-merge format-patch-msgstore
-
-  Needs some changes to send-email as it does not pass --in-reply-to
-  through to format-patch.
