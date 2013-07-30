@@ -1,14 +1,12 @@
-base origin/jch
+base origin/next
 
 merge origin/jk/fast-import-empty-ls
 
   Cooking upstream.
 
+merge origin/rj/doc-rev-parse
+
 merge origin/jc/pull-training-wheel
-
-merge rev-parse-args
-
-  Submitted upstream.
 
 merge rebase-i-comment-squash
 
