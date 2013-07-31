@@ -8,6 +8,10 @@ merge origin/rj/doc-rev-parse
 
 merge origin/jc/pull-training-wheel
 
+merge reset-submodule-trailing-slash
+
+  Waiting for nd/magic-pathspecs to graduate to master.
+
 merge rebase-i-comment-squash
 
   Comment out the first line of a "!squash" commit when generating a
