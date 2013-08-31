@@ -4,8 +4,6 @@ merge origin/jk/fast-import-empty-ls
 
   Cooking upstream.
 
-merge origin/rj/doc-rev-parse
-
 merge origin/jc/pull-training-wheel
 
 merge reset-submodule-trailing-slash
