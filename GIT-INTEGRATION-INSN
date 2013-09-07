@@ -2,6 +2,10 @@ base origin/jch
 
 merge origin/jc/pull-training-wheel
 
+merge rm-python-remote-helpers
+
+  Remove the git_remote_helpers Python library.
+
 merge reset-submodule-trailing-slash
 
   Waiting for nd/magic-pathspecs to graduate to master.
