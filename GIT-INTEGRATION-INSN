@@ -1,9 +1,5 @@
 base origin/jch
 
-merge origin/jk/fast-import-empty-ls
-
-  Cooking upstream.
-
 merge origin/jc/pull-training-wheel
 
 merge reset-submodule-trailing-slash
@@ -19,3 +15,9 @@ merge rebase-i-comment-squash
   this is a sensible change.
 
 merge origin/mm/status-without-comment-char
+
+merge rebase-upstream-reflog
+
+  Use the reflog when no rebase root is specified so that we can do
+  better at avoiding conflicts when the upstream branch has been
+  rewritten.
