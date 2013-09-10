@@ -25,3 +25,5 @@ merge origin/mm/status-without-comment-char
   Use the reflog when no rebase root is specified so that we can do
   better at avoiding conflicts when the upstream branch has been
   rewritten.
+
+  Breaks t3400 @{upstream} test.
