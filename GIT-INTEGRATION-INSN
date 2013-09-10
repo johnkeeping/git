@@ -20,7 +20,7 @@ merge rebase-i-comment-squash
 
 merge origin/mm/status-without-comment-char
 
-merge rebase-upstream-reflog
+. merge rebase-upstream-reflog
 
   Use the reflog when no rebase root is specified so that we can do
   better at avoiding conflicts when the upstream branch has been
