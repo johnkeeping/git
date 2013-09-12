@@ -6,7 +6,7 @@ merge rm-python-remote-helpers
 
 merge reset-submodule-trailing-slash
 
-  Waiting for nd/magic-pathspecs to graduate to master.
+  Submitted upstream as v2.
 
 merge rebase-i-comment-squash
 
