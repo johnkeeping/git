@@ -1,10 +1,10 @@
 base origin/jch
 
-merge rm-python-remote-helpers
+merge origin/jk/remove-remote-helpers-in-python
 
   Remove the git_remote_helpers Python library.
 
-merge reset-submodule-trailing-slash
+merge origin/jk/trailing-slash-in-pathspec
 
   Submitted upstream as v2.
 
