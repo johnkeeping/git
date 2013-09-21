@@ -1,9 +1,5 @@
 base origin/jch
 
-merge origin/jk/remove-remote-helpers-in-python
-
-  Remove the git_remote_helpers Python library.
-
 merge origin/jk/trailing-slash-in-pathspec
 
   Submitted upstream as v2.
@@ -15,8 +11,6 @@ merge rebase-i-comment-squash
 
   Merged to jk/pu on 2013-03-30.  Dogfooding for a while to see if
   this is a sensible change.
-
-merge origin/mm/status-without-comment-char
 
 . merge rebase-upstream-reflog
 
