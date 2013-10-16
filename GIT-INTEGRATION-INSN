@@ -14,6 +14,8 @@ merge rebase-i-comment-squash
 
 merge rebase-upstream-reflog
 
+  Submitted upstream.
+
   Use the reflog when no rebase root is specified so that we can do
   better at avoiding conflicts when the upstream branch has been
   rewritten.
