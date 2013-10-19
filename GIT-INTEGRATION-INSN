@@ -20,4 +20,8 @@ merge rebase-upstream-reflog
   better at avoiding conflicts when the upstream branch has been
   rewritten.
 
+merge pull-use-is-ancestor
+
+  Small performance improvement.
+
 merge log-cherry-no-merges
