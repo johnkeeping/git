@@ -1,9 +1,5 @@
 base origin/jch
 
-merge origin/jk/trailing-slash-in-pathspec
-
-  Submitted upstream as v2.
-
 merge rebase-i-comment-squash
 
   Comment out the first line of a "!squash" commit when generating a
@@ -20,8 +16,19 @@ merge rebase-upstream-reflog
   better at avoiding conflicts when the upstream branch has been
   rewritten.
 
+  Waiting for jc/merge-base-reflog to stabilise and graduate before
+  re-rolling this to use the new functionality introduced there.
+
 merge pull-use-is-ancestor
 
-  Small performance improvement.
+  Needs to be re-rolled on top of jk/merge-base-reflog when that
+  graduates, so that we can get even more performance.
 
 merge log-cherry-no-merges
+
+  Don't consider merges for cherry comparison.
+
+merge format-patch-msgstore
+
+  Needs more work to figure out how to integrate this with
+  git-send-email.
