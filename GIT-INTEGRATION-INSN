@@ -32,3 +32,7 @@ merge format-patch-msgstore
 
   Needs more work to figure out how to integrate this with
   git-send-email.
+
+merge split-instaweb
+
+  Split the instaweb script to have each HTTP daemon in its own file.
