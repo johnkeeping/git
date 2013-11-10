@@ -1,5 +1,11 @@
 base origin/jch
 
+merge 2.0-deprecated-command-cleanup
+
+  Submitted upstream.
+
+  Remove deprecated command as Git 2.0 is approaching.
+
 merge rebase-i-comment-squash
 
   Comment out the first line of a "!squash" commit when generating a
