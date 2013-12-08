@@ -21,8 +21,7 @@ merge rebase-upstream-reflog
 
 merge pull-use-is-ancestor
 
-  Needs to be re-rolled on top of jk/merge-base-reflog when that
-  graduates, so that we can get even more performance.
+  Now uses --fork-point to replace the shell loop.
 
 merge log-cherry-no-merges
 
