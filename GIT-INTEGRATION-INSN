@@ -8,10 +8,6 @@ merge rebase-i-comment-squash
   Merged to jk/pu on 2013-03-30.  Dogfooding for a while to see if
   this is a sensible change.
 
-merge pull-use-is-ancestor
-
-  Now uses --fork-point to replace the shell loop.
-
 merge log-cherry-no-merges
 
   Don't consider merges for cherry comparison.
