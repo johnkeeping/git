@@ -8,12 +8,6 @@ merge rebase-i-comment-squash
   Merged to jk/pu on 2013-03-30.  Dogfooding for a while to see if
   this is a sensible change.
 
-merge rebase-upstream-reflog
-
-  Use the reflog when no rebase root is specified so that we can do
-  better at avoiding conflicts when the upstream branch has been
-  rewritten.
-
 merge pull-use-is-ancestor
 
   Now uses --fork-point to replace the shell loop.
