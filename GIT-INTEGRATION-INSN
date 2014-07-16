@@ -1,5 +1,7 @@
 base origin/jch
 
+merge rebase-fork-point
+
 merge rebase-i-comment-squash
 
   Comment out the first line of a "!squash" commit when generating a
