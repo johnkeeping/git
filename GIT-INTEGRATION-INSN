@@ -1,5 +1,7 @@
 base origin/jch
 
+merge complete-push
+
 merge rebase-fork-point
 
 merge rebase-i-comment-squash
