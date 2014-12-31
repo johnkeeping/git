@@ -1,5 +1,9 @@
 base origin/jch
 
+merge interpret-trailer-improvements
+
+  Allow git-interpret-trailers to run outside a repository.
+
 merge rebase-i-comment-squash
 
   Comment out the first line of a "!squash" commit when generating a
