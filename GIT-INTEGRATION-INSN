@@ -16,6 +16,8 @@ merge log-cherry-no-merges
 
   Don't consider merges for cherry comparison.
 
-merge split-instaweb
+. merge split-instaweb
 
   Split the instaweb script to have each HTTP daemon in its own file.
+
+merge instaweb-python
