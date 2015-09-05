@@ -1,5 +1,17 @@
 base origin/jch
 
+merge test-subshell-when-finished
+
+  Detect bugs in tests where test_when_finished is used in a subshell.
+
+  Submitted upstream.
+
+merge jk/date-local
+
+  Make "local" orthogonal to the date format.
+
+  Submitted upstream.
+
 merge interpret-trailer-improvements
 
   Allow git-interpret-trailers to run outside a repository.
