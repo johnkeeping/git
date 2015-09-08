@@ -18,6 +18,10 @@ merge interpret-trailer-improvements
 
   Submitted upstream.
 
+merge sha1-normalize-path
+
+  Needs tests in t1506.
+
 merge rebase-i-comment-squash
 
   Comment out the first line of a "!squash" commit when generating a
