@@ -4,6 +4,10 @@ merge complete-rebase-keep-empty
 
   Submitted upstream.
 
+merge complete-verify-tag
+
+  Submitted upstream.
+
 merge sha1-normalize-path
 
   Needs tests in t1506.
