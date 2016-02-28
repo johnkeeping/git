@@ -1,9 +1,5 @@
 base origin/jch
 
-merge complete-rebase-keep-empty
-
-  Submitted upstream.
-
 merge complete-verify-tag
 
   Submitted upstream.
