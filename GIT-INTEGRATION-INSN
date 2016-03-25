@@ -4,10 +4,6 @@ merge config-urlmatch-exit-code
 
   Message-Id: cover.1456660027.git.john@keeping.me.uk
 
-merge complete-verify-tag
-
-  Submitted upstream.
-
 merge sha1-normalize-path
 
   Needs tests in t1506.
