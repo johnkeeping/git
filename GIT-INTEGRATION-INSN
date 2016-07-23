@@ -8,6 +8,8 @@ merge push-cas-new-branch
 
   Allow pushing new branches with --force-with-lease
 
+  Message-Id: <6b401124e734d4f5486003459e586cc05c7843e8.1469287889.git.john@keeping.me.uk>
+
 merge sha1-normalize-path
 
   Needs tests in t1506.
