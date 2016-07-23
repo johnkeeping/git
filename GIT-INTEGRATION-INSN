@@ -1,9 +1,5 @@
 base origin/jch
 
-merge config-urlmatch-exit-code
-
-  Message-Id: cover.1456660027.git.john@keeping.me.uk
-
 merge push-cas-new-branch
 
   Allow pushing new branches with --force-with-lease
