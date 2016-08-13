@@ -1,5 +1,9 @@
 base origin/jch
 
+merge difftool-exit-not-found
+
+  Handle the case of a missing diff utility specially.
+
 merge sha1-normalize-path
 
   Needs tests in t1506.
