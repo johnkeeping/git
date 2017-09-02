@@ -1485,8 +1485,15 @@ static void diagnose_invalid_index_path(int stage,
 
 static char *resolve_relative_path(const char *rel)
 {
-	if (!starts_with(rel, "./") && !starts_with(rel, "../"))
-		return NULL;
+	if (!starts_with(rel, "./") && !starts_with(rel, "../")) {
+		struct strbuf buf = STRBUF_INIT;
+		strbuf_addstr(&buf, rel);
+		if (normalize_path_copy(buf.buf, buf.buf)) {
+			strbuf_release(&buf);
+			return NULL;
+		}
+		return strbuf_detach(&buf, NULL);
+	}
 
 	if (!is_inside_work_tree())
 		die("relative path syntax can't be used outside working tree.");
