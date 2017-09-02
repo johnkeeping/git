@@ -6,6 +6,18 @@ test_description='auto squash'
 
 . "$TEST_DIRECTORY"/lib-rebase.sh
 
+# Set up an editor that uncomments squash! lines so that we can count the
+# number of squashed commits accurately.
+write_script commit-msg-editor.sh <<-\EOF
+case "$1" in
+*/COMMIT_EDITMSG)
+	sed -e 's/^# squash! /squash!/' "$1" >"$1".tmp
+	mv "$1".tmp "$1"
+	;;
+esac
+EOF
+test_set_editor "$(pwd)/commit-msg-editor.sh"
+
 test_expect_success setup '
 	echo 0 >file0 &&
 	git add . &&

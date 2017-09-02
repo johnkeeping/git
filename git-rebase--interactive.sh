@@ -453,8 +453,17 @@ update_squash_messages () {
 		rm -f "$fixup_msg"
 		echo
 		printf '%s\n' "$comment_char $(this_nth_commit_message $count)"
-		echo
-		commit_message $2
+		# If the message begins with "squash!" print an empty comment
+		# line followed by the message with the first line commented.
+		# Otherwise just print a blank line followed by the message.
+		message=$(commit_message $2)
+		if test "$message" != "${message#squash! }"
+		then
+			printf '%s\n%s ' "$comment_char" "$comment_char"
+		else
+			echo
+		fi
+		printf '%s\n' "$message"
 		;;
 	fixup)
 		echo
