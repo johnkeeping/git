@@ -839,6 +839,11 @@ static void cherry_pick_list(struct commit_list *list, struct rev_info *revs)
 
 		if (flags & BOUNDARY)
 			continue;
+
+		/* Patch ID is meaningless for merges. */
+		if (commit->parents && commit->parents->next)
+			continue;
+
 		/*
 		 * If we have fewer left, left_first is set and we omit
 		 * commits on the right branch in this loop.  If we have
@@ -860,6 +865,11 @@ static void cherry_pick_list(struct commit_list *list, struct rev_info *revs)
 
 		if (flags & BOUNDARY)
 			continue;
+
+		/* Patch ID is meaningless for merges. */
+		if (commit->parents && commit->parents->next)
+			continue;
+
 		/*
 		 * If we have fewer left, left_first is set and we omit
 		 * commits on the left branch in this loop.
