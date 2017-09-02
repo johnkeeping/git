@@ -1,0 +1,117 @@
+#!/bin/sh
+
+handles_httpd () {
+	case "$1" in
+	*lighttpd*)
+		# Be careful not to claim that we are lighttpd.
+		return 1
+		;;
+	*apache2*|*httpd*)
+		return 0
+		;;
+	esac
+	return 1
+}
+
+resolve_full_httpd () {
+	# ensure that the apache2 command ends with "-f"
+	if ! echo "$httpd" | sane_grep -- '-f *$' >/dev/null 2>&1
+	then
+		httpd="$httpd -f"
+	fi
+	default_resolve_full_httpd
+}
+
+configure_httpd () {
+	if test -z "$module_path"
+	then
+		test -d "/usr/lib/httpd/modules" &&
+			module_path="/usr/lib/httpd/modules"
+		test -d "/usr/lib/apache2/modules" &&
+			module_path="/usr/lib/apache2/modules"
+	fi
+	bind=
+	test x"$local" = xtrue && bind='127.0.0.1:'
+	echo 'text/css css' > "$fqgitdir/mime.types"
+	cat > "$conf" <<EOF
+ServerName "git-instaweb"
+ServerRoot "$root"
+DocumentRoot "$root"
+ErrorLog "$fqgitdir/gitweb/$httpd_only/error.log"
+CustomLog "$fqgitdir/gitweb/$httpd_only/access.log" combined
+PidFile "$fqgitdir/pid"
+Listen $bind$port
+EOF
+
+	for mod in mpm_event mpm_prefork mpm_worker
+	do
+		if test -e $module_path/mod_${mod}.so
+		then
+			echo "LoadModule ${mod}_module " \
+			     "$module_path/mod_${mod}.so" >> "$conf"
+			# only one mpm module permitted
+			break
+		fi
+	done
+	for mod in mime dir env log_config authz_core
+	do
+		if test -e $module_path/mod_${mod}.so
+		then
+			echo "LoadModule ${mod}_module " \
+			     "$module_path/mod_${mod}.so" >> "$conf"
+		fi
+	done
+	cat >> "$conf" <<EOF
+TypesConfig "$fqgitdir/mime.types"
+DirectoryIndex gitweb.cgi
+EOF
+
+	# check to see if Dennis Stosberg's mod_perl compatibility patch
+	# (<20060621130708.Gcbc6e5c@leonov.stosberg.net>) has been applied
+	if test -f "$module_path/mod_perl.so" &&
+	   sane_grep 'MOD_PERL' "$root/gitweb.cgi" >/dev/null
+	then
+		# favor mod_perl if available
+		cat >> "$conf" <<EOF
+LoadModule perl_module $module_path/mod_perl.so
+PerlPassEnv GIT_DIR
+PerlPassEnv GIT_EXEC_PATH
+PerlPassEnv GITWEB_CONFIG
+<Location /gitweb.cgi>
+	SetHandler perl-script
+	PerlResponseHandler ModPerl::Registry
+	PerlOptions +ParseHeaders
+	Options +ExecCGI
+</Location>
+EOF
+	else
+		# plain-old CGI
+		resolve_full_httpd
+		list_mods=$(echo "$full_httpd" | sed 's/-f$/-l/')
+		$list_mods | sane_grep 'mod_cgi\.c' >/dev/null 2>&1 || \
+		if test -f "$module_path/mod_cgi.so"
+		then
+			echo "LoadModule cgi_module $module_path/mod_cgi.so" >> "$conf"
+		else
+			$list_mods | grep 'mod_cgid\.c' >/dev/null 2>&1 || \
+			if test -f "$module_path/mod_cgid.so"
+			then
+				echo "LoadModule cgid_module $module_path/mod_cgid.so" \
+					>> "$conf"
+			else
+				echo "You have no CGI support!"
+				exit 2
+			fi
+			echo "ScriptSock logs/gitweb.sock" >> "$conf"
+		fi
+		cat >> "$conf" <<EOF
+PassEnv GIT_DIR
+PassEnv GIT_EXEC_PATH
+PassEnv GITWEB_CONFIG
+AddHandler cgi-script .cgi
+<Location /gitweb.cgi>
+	Options +ExecCGI
+</Location>
+EOF
+	fi
+}

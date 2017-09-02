@@ -467,6 +467,7 @@ bindir = $(prefix)/$(bindir_relative)
 mandir = $(prefix)/share/man
 infodir = $(prefix)/share/info
 gitexecdir = libexec/git-core
+httpdsdir = $(gitexecdir)/httpds
 mergetoolsdir = $(gitexecdir)/mergetools
 sharedir = $(prefix)/share
 gitwebdir = $(sharedir)/gitweb
@@ -2501,6 +2502,13 @@ endif
 gitexec_instdir_SQ = $(subst ','\'',$(gitexec_instdir))
 export gitexec_instdir
 
+ifneq ($(filter /%,$(firstword $(httpdsdir))),)
+httpds_instdir = $(httpdsdir)
+else
+httpds_instdir = $(prefix)/$(httpdsdir)
+endif
+httpds_instdir_SQ = $(subst ','\'',$(httpds_instdir))
+
 ifneq ($(filter /%,$(firstword $(mergetoolsdir))),)
 mergetools_instdir = $(mergetoolsdir)
 else
@@ -2524,6 +2532,8 @@ install: all
 	$(INSTALL) -m 644 $(SCRIPT_LIB) '$(DESTDIR_SQ)$(gitexec_instdir_SQ)'
 	$(INSTALL) $(install_bindir_programs) '$(DESTDIR_SQ)$(bindir_SQ)'
 	$(MAKE) -C templates DESTDIR='$(DESTDIR_SQ)' install
+	$(INSTALL) -d -m 755 '$(DESTDIR_SQ)$(httpds_instdir_SQ)'
+	$(INSTALL) -m 644 httpds/* '$(DESTDIR_SQ)$(httpds_instdir_SQ)'
 	$(INSTALL) -d -m 755 '$(DESTDIR_SQ)$(mergetools_instdir_SQ)'
 	$(INSTALL) -m 644 mergetools/* '$(DESTDIR_SQ)$(mergetools_instdir_SQ)'
 ifndef NO_GETTEXT
